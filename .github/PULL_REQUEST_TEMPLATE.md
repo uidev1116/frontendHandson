@@ -1,6 +1,6 @@
-# [課題No](リンク)
+# [Lesson No.](リンク)
 ## [CodeSandBox](リンク) :最新のコミットリンク
 
-## 実装上、不安なところ、重点的に見てもらいたいところ
-- コミットリンク
-- コミットリンク
+## Concerns and areas to focus on
+- commit link
+- commit link
