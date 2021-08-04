@@ -12,14 +12,15 @@ const dataList = [
 ]
 
 const createImageList = (data) => {
+  const flag = document.createDocumentFragment()
   const li = document.createElement('li');
   const a = document.createElement('a')
   a.href = data.href;
   const img = document.createElement('img')
   img.src = `/img/${data.src}`;
   const text = document.createTextNode(data.text)
-  li.appendChild(a).appendChild(img).appendChild(text);
-  return li;
+  flag.appendChild(li).appendChild(a).appendChild(img).appendChild(text);
+  return flag;
 }
 
 const elems = dataList.map(createImageList);
