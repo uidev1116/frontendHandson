@@ -23,7 +23,11 @@ const createImageList = (data) => {
   return flag;
 }
 
+const appendChild = (target) => (elem) => {
+  target.appendChild(elem);
+}
+
 const elems = dataList.map(createImageList);
 
 const ul = document.getElementById('js-list');
-elems.map((elem) => ul.appendChild(elem));
+elems.map(appendChild(ul));
