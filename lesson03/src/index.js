@@ -19,15 +19,11 @@ const createImageList = (data) => {
   const img = document.createElement('img')
   img.src = `/img/${data.src}`;
   const text = document.createTextNode(data.text)
-  flag.appendChild(li).appendChild(a).appendChild(img).appendChild(text);
+  flag.appendChild(li).appendChild(a).appendChild(img).after(text);
   return flag;
-}
-
-const appendChild = (target) => (elem) => {
-  target.appendChild(elem);
 }
 
 const elems = dataList.map(createImageList);
 
 const ul = document.getElementById('js-list');
-elems.map(appendChild(ul));
+ul.append(...elems);
