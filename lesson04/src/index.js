@@ -18,9 +18,9 @@ const createImageList = (data) => {
   const flag = document.createDocumentFragment()
   const li = document.createElement('li');
   const a = document.createElement('a')
-  a.href = data.to;
+  a.href = `/${data.to}`;
   const img = document.createElement('img')
-  img.src = `/img/${data.img}`;
+  img.src = data.img;
   img.alt = data.alt
   const text = data.text;
   flag.appendChild(li).appendChild(a).appendChild(img).insertAdjacentHTML('afterend', text);
@@ -29,7 +29,7 @@ const createImageList = (data) => {
 
 const elems = dataList.map(createImageList);
 
-const append = (target) => (elem) => target.appendChild(elem);
+const appendElemToParent = (parent) => (elem) => parent.appendChild(elem);
 
 const ul = document.getElementById('js-list');
 elems.map(append(ul));
