@@ -32,5 +32,5 @@ const elems = dataList.map(createImageList);
 const appendElemToParent = (parent) => (elem) => parent.appendChild(elem);
 
 const ul = document.getElementById('js-list');
-elems.map(append(ul));
+elems.map(appendElemToParent(ul));
 
